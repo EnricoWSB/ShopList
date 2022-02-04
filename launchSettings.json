@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "serviceActions": {
+        "shoplistwebapp": "StartWithoutDebugging"
+      },
+      "commandVersion": "1.0"
+    }
+  }
+}

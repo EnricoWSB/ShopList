@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  shoplistwebapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "5001:443"
+      - "5000:80"
+    env_file:
+      - variables.env
