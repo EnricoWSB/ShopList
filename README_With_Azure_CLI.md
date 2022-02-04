@@ -1,7 +1,7 @@
 # Prepare local environment
 
 ```
-git clone https://github.com/msdfib/ShopListWebApp
+git clone https://github.com/EnricoWSB/ShopList
 cd shoplist
 git branch -m main
 ```
@@ -53,11 +53,11 @@ dotnet ef migrations add InitialCreate
 
 # Set connection string to production database
 # PowerShell
-$env:ConnectionStrings:MyDbConnection="<connection-string>"
+$env:CONNECTION_STRING="<connection-string>"
 # CMD (no quotes)
-set ConnectionStrings:MyDbConnection=<connection-string>
+set CONNECTION_STRING=<connection-string>
 # Bash (no quotes)
-export ConnectionStrings__MyDbConnection=<connection-string>
+export CONNECTION_STRING=<connection-string>
 
 # Run migrations
 dotnet ef database update
@@ -106,5 +106,3 @@ App should be avaiable under the link
 ```
 http://<app-name>.azurewebsites.net
 ```
-
-
