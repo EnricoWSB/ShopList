@@ -16,7 +16,7 @@ git
 
 ### Clone repo to local
 ```
-git clone https://github.com/msdfib/dwa.git
+git clone https://github.com/EnricoWSB/ShopList.git
 ```
 
 ### From cmd/terminal open repo location and execue following commands
