@@ -93,13 +93,13 @@ az webapp config connection-string set --resource-group <myResourceGroup> --name
 
 Set up web app deployment branch (default = master for VS2019)
 ```
-az webapp config appsettings set --name <app-name> --resource-group <myResourceGroup> --settings DEPLOYMENT_BRANCH='master'
+az webapp config appsettings set --name <app-name> --resource-group <myResourceGroup> --settings DEPLOYMENT_BRANCH='main'
 ```
 
 Set up GIT URL & deploy the app
 ```
  git remote set-url origin <GIT-url-for-the-app>
- git push -u origin master
+ git push -u origin main
 ```
 
 App should be avaiable under the link
