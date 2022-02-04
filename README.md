@@ -6,6 +6,7 @@ Once the project is deployed, file migrations will be applied automatically.
 
 ```
 terraform
+git
 ```
 
 ## _Installation_
