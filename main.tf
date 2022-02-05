@@ -27,7 +27,7 @@ resource "azurerm_storage_account" "sa" {
   account_replication_type = "LRS"
 }
 
-resource "azurerm_sql_server" "sqlserver" {
+resource "azurerm_sql_server" "appdb" {
   name                         = var.sql_server_name
   resource_group_name          = azurerm_resource_group.rg.name
   location                     = azurerm_resource_group.rg.location
@@ -41,7 +41,7 @@ resource "azurerm_sql_database" "db" {
   name                = var.sql_database_name
   resource_group_name          = azurerm_resource_group.rg.name
   location                     = azurerm_resource_group.rg.location
-  server_name         = azurerm_sql_server.sqlserver.name
+  server_name         = azurerm_sql_server.appdb.name
 }
 
 resource "azurerm_virtual_network" "main" {
@@ -107,7 +107,7 @@ resource "azurerm_linux_virtual_machine" "main" {
 resource "azurerm_sql_firewall_rule" "fr" {
   name                = "OnlyVM"
   resource_group_name = azurerm_resource_group.rg.name
-  server_name         = azurerm_sql_server.sqlserver.name
+  server_name         = azurerm_sql_server.appdb.name
   start_ip_address    = azurerm_linux_virtual_machine.main.public_ip_address
   end_ip_address      = azurerm_linux_virtual_machine.main.public_ip_address
 }
