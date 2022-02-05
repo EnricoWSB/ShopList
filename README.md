@@ -34,7 +34,7 @@ ssh ubuntu@{vm_public_ip}
 
 ### Clone repo to VM
 ```
-git clone https://github.com/msdfib/dwa.git
+git clone https://github.com/EnricoWSB/ShopList.git
 cd ShopListWebApp/
 ```
 
