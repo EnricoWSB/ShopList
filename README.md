@@ -35,7 +35,7 @@ ssh ubuntu@{vm_public_ip}
 ### Clone repo to VM
 ```
 git clone https://github.com/EnricoWSB/ShopList.git
-cd ShopListWebApp/
+cd ShopList/
 ```
 
 ### From local repo upload .env file
