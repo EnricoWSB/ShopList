@@ -1,6 +1,5 @@
 # ShopList App
-ShopList is an WebApplication that consits of .NET Core WebApp project and a SQL Database (ORM - Entity Framework).
-Once the project is deployed, file migrations will be applied automatically.
+ShopList is a WebApp consisting of a .NET Core WebApp project and a SQL database (ORM - Entity Framework). Once the project is deployed, file migrations will be applied automatically.
 
 ## _Prerequisities_
 
