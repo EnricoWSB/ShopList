@@ -45,8 +45,8 @@ resource "azurerm_sql_server" "appdb" {
 
 resource "azurerm_sql_database" "db" {
   name                = var.sql_database_name
-  resource_group_name          = azurerm_resource_group.rg.name
-  location                     = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
   server_name         = azurerm_sql_server.appdb.name
 }
 
