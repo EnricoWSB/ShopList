@@ -6,6 +6,7 @@ ShopList is a WebApp consisting of a .NET Core WebApp project and a SQL database
 ```
 terraform
 git
+Azure account
 ```
 
 ## _Installation_
