@@ -14,6 +14,12 @@ provider "azurerm" {
   features {}
 }
 
+resource "random_password" "password" {
+  length           = 16
+  special          = true
+  override_special = "#"
+}
+
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.resource_group_location
