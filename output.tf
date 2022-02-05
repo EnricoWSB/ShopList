@@ -8,11 +8,11 @@ output "database_name" {
 
 output "connection_string" {
   description = "Connection string for the Azure SQL Database created."
-  value = "Server=tcp:${azurerm_sql_server.appdb.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_sql_database.db.name};Persist Security Info=False;User ID=${var.sql_admin_username};Password=${azurerm_sql_server.appdb.administrator_login_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+  value       = "Server=tcp:${azurerm_sql_server.appdb.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_sql_database.db.name};Persist Security Info=False;User ID=${var.sql_admin_username};Password=${azurerm_sql_server.appdb.administrator_login_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
   sensitive   = true
 }
 
 output "vm_public_ip" {
-    value = azurerm_linux_virtual_machine.main.public_ip_address
-    sensitive = true
-} 
+  value     = azurerm_linux_virtual_machine.main.public_ip_address
+  sensitive = true
+}
