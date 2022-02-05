@@ -91,7 +91,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   location                        = azurerm_resource_group.rg.location
   size                            = "Standard_B1ms"
   admin_username                  = "ubuntu"
-  admin_password                  = var.sql_password
+  admin_password                  = random_password.password.result
   disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.main.id,
@@ -100,7 +100,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   source_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
-    sku       = "18.04-LTS"
+    sku       = "20.04-LTS"
     version   = "latest"
   }
 
