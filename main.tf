@@ -39,7 +39,7 @@ resource "azurerm_sql_server" "appdb" {
   location                     = azurerm_resource_group.rg.location
   version                      = "12.0"
   administrator_login          = var.sql_admin_username
-  administrator_login_password = var.sql_password
+  administrator_login_password = random_password.password.result
 }
 
 
